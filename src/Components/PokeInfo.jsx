@@ -2,7 +2,6 @@ import React from "react"
 import CapitalizeWord from "../Functions/CapitalizeWord";
 
 export default function PokeInfo({ data }) {
-   // console.log(data);
    return (
       <>
          {

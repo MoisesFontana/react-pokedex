@@ -46,14 +46,11 @@ export default function Main() {
          setPokeData([])
          pokeFunction()
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [url, pokeSearch])
 
    return (
       <>
-         {/* <header>
-            <h1>Pokedex</h1>
-            <hr></hr>
-         </header> */}
          <Header />
          <div className="container">
             <div className="left-content">
