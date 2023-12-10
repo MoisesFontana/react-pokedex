@@ -4,8 +4,10 @@ export default function Header() {
    return (
       <header>
          <div className="logo-title">
-            <img src={pokeball} alt="Pokeball Icon" />
-            <h1>Pokedex</h1>
+            <a href="/">
+               <img src={pokeball} alt="Pokeball Icon" />
+               <h1>Pokedex</h1>
+            </a>
          </div>
          <hr></hr>
       </header>

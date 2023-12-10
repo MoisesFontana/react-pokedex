@@ -17,18 +17,21 @@ header {
 }
 
 .logo-title {
-   padding-left: 25%;
-
    display: flex;
-   justify-content: flex-start;
+   justify-content: center;
    align-items: center;
 }
 
-.logo-title > img {
+.logo-title > a {
+   text-decoration: none;
+   display: flex;
+}
+
+.logo-title > a > img {
    height: 3rem;
 }
 
-.logo-title > h1 {
+.logo-title > a > h1 {
    text-align: center;
    font-size: 3rem;
    margin-bottom: 0;
@@ -44,16 +47,15 @@ header > hr {
 }
 
 .container {
-   width: 90%;
+   width: 60%;
    margin: auto;
    padding-top: 3rem;
 
    display: flex;
 }
 
-.left-content,
-.right-content {
-   flex-basis: 60%;
+.left-content {
+   flex-basis: 100%;
 }
 
 .left-content {
@@ -118,6 +120,10 @@ header > hr {
    display: flex;
    justify-content: space-between;
    align-items: center;
+}
+
+.card-top {
+   margin-top: 0;
 }
 
 .card-top > h2 {
@@ -195,8 +201,22 @@ header > hr {
 /* ============================================ */
 /* ===== POKEMON INFO STYLES ================== */
 /* ============================================ */
+.modal-background {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: hsla(0, 0%, 2%, 0.862);
+}
+
 .poke-info {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    /* border: solid green 2px; */
+   max-width: 400px;
    min-width: 300px;
    height: 600px;
    border-radius: 20px;
@@ -212,10 +232,19 @@ header > hr {
 
 .poke-info-top {
    padding: 0 1.5rem;
+   height: 250px;
 }
 
-.poke-info-top {
-   height: 250px;
+.poke-info-top > p {
+   width: 30%;
+   padding-bottom: 0.1rem;
+   margin-left: calc((100% - 30%) / 2);
+   text-align: center;
+   font-size: 0.9rem;
+   color: #fffc;
+   background-color: rgba(0, 0, 0, 0.548);
+   border-radius: 0 0 15px 15px;
+   cursor: pointer;
 }
 
 .poke-info-types {
@@ -243,6 +272,7 @@ header > hr {
 }
 
 .poke-info-botton > img {
+   margin-left: calc((100% - 220px) / 2);
    height: 220px;
    max-width: 225px;
    margin-top: -12rem;

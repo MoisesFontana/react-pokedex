@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import CapitalizeWord from "../Functions/CapitalizeWord";
 
-export default function Card({ pokemon, loading, infoPokemon }) {
-   const [modal, setModal] = useState(false);
-
+export default function Card({ pokemon, loading, infoPokemon, isOpen, setModal }) {
    function openModal(poke) {
-      // console.log(modal, poke);
-      setModal(!modal);
-      infoPokemon(poke);
+      infoPokemon(poke)
+      setModal(!isOpen)
+      // console.log(setModal);
    }
 
    return (

@@ -7,7 +7,7 @@ import Header from "./Header";
 export default function Main() {
    const [pokeSearch, setPokeSearch] = useState([]);
    const [pokeData, setPokeData] = useState([]);
-   // const [modal, setModal] = useState(false);
+   const [modal, setModal] = useState(false);
    const [loading, setLoading] = useState(true);
    const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
    const [nextUrl, setNextUrl] = useState();
@@ -58,7 +58,8 @@ export default function Main() {
                <SearchBar className="search-bar" setPokeSearch={setPokeSearch} />
 
                <div className="left-content-grid">
-                  <Card key={pokeData.id} pokemon={pokeData} loading={loading} infoPokemon={poke => setPokedex(poke)} />
+                  <Card key={pokeData.id} pokemon={pokeData} loading={loading} infoPokemon={poke => setPokedex(poke)} isOpen={modal} setModal={setModal} />
+                  {/* <Card key={pokeData.id} pokemon={pokeData} loading={loading} infoPokemon={poke => setPokedex(poke)} isOpen={modal => setModal(modal)} /> */}
                </div>
                <div className="btn-next-prev">
                   {
@@ -80,8 +81,8 @@ export default function Main() {
             <div className="right-content">
                {/* <PokeInfo data={pokedex} /> */}
                {/* <ModalPokeInfo data={pokedex} setModal={setModal} /> */}
-               <ModalPokeInfo data={pokedex} setModal={true} />
             </div>
+            <ModalPokeInfo data={pokedex} isOpen={modal} setModal={setModal} />
          </div>
       </>
    )
