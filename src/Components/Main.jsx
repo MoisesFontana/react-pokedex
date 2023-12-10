@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import PokeInfo from "./PokeInfo";
+import ModalPokeInfo from "./ModalPokeInfo";
 import SearchBar from "./SearchBar";
 import Header from "./Header";
 
 export default function Main() {
    const [pokeSearch, setPokeSearch] = useState([]);
    const [pokeData, setPokeData] = useState([]);
+   // const [modal, setModal] = useState(false);
    const [loading, setLoading] = useState(true);
    const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
    const [nextUrl, setNextUrl] = useState();
@@ -77,7 +78,9 @@ export default function Main() {
                </div>
             </div>
             <div className="right-content">
-               <PokeInfo data={pokedex} />
+               {/* <PokeInfo data={pokedex} /> */}
+               {/* <ModalPokeInfo data={pokedex} setModal={setModal} /> */}
+               <ModalPokeInfo data={pokedex} setModal={true} />
             </div>
          </div>
       </>
