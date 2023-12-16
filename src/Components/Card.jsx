@@ -14,7 +14,6 @@ export default function Card({ pokemon, loading, infoPokemon, isOpen, setModal }
             loading ? <h1>Loading...</h1> :
                pokemon.map((poke) => {
                   return (
-                     // <div className={"card " + poke.types[0].type.name} key={poke.id} onClick={() => infoPokemon(poke)}>
                      <div className={"card " + poke.types[0].type.name} key={poke.id} onClick={() => openModal(poke)}>
                         <span className="card-top">
                            <h2>{CapitalizeWord(poke.name)}</h2>

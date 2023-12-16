@@ -99,11 +99,20 @@ header > hr {
    outline: solid 3px #26cf80;
 }
 
+.not-found {
+   margin: -0.9rem 0 0.5rem 0;
+   padding: 0.1rem 0.4rem;
+   color: #fffd;
+   background-color: coral;
+   font-size: 0.8rem;
+   border-radius: 0.5rem;
+}
+
 .card {
    max-width: 250px;
    border-radius: 1rem;
    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-   padding: 0 1.5rem;
+   padding: 0.3rem 1.5rem 0 1.5rem;
    cursor: pointer;
 }
 
